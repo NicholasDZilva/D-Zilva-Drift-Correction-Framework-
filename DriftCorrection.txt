@@ -1,0 +1,237 @@
+D’Zilva Systems Note v1.1
+
+Universal Failure Framework & Drift Correction Principle
+
+---
+
+Abstract
+
+This paper formalises system failure under real-world conditions and introduces a corresponding drift correction principle.
+
+D’Zilva’s Universal Failure Framework extends classical control theory by incorporating time dependence, observer independence, signal degradation, and irreversibility accumulation as first-order variables.
+
+A complementary correction model is defined as a bounded stabilisation condition, rather than restoration of prior system states.
+
+This document is intentionally non-operational and defines structural relationships only.
+
+---
+
+1. Introduction
+
+Classical control theory assumes that system stability is maintained when regulatory capacity exceeds environmental complexity.
+
+However, real-world systems operate under conditions where:
+
+- feedback signals degrade or become selectively filtered
+- regulatory mechanisms become partially dependent on the systems they regulate
+- past system states constrain future options through accumulated decisions
+
+These conditions introduce structural distortion over time.
+
+As a result, control must be treated as a dynamic condition subject to degradation rather than a static property.
+
+---
+
+2. Real-World Failure Drivers
+
+In practical systems:
+
+- feedback integrity is often reduced through noise, delay, or suppression
+- regulatory independence may be weakened by incentive coupling
+- irreversible decisions accumulate, increasing the cost of future correction
+
+These effects produce:
+
+- reduced observability
+- diminished effective correction capacity
+- increasing structural lock-in over time
+
+The variables introduced in this framework formalise these conditions.
+
+---
+
+3. Universal Control Condition
+
+System control is defined as:
+
+R_control(t) ≥ L_load(t)
+
+Where:
+
+R_control(t) represents effective regulatory capacity over time
+L_load(t) represents system load under distortion conditions
+
+---
+
+4. Extended Control Formulation
+
+Effective control capacity is defined as:
+
+R_control(t) = R(S, t) · κ · Θ(C − C₍crit₎)
+
+System load is defined as:
+
+L_load(t) = R(D, t) + ΔI(t) + S(t)
+
+Where:
+
+κ = observer independence coefficient
+Θ(C − C₍crit₎) = threshold function for minimum viable correction capacity
+ΔI(t) = irreversibility accumulation over time
+S(t) = signal suppression or distortion
+
+---
+
+5. Failure Condition
+
+Failure occurs when:
+
+R_control(t) < L_load(t)
+
+This condition does not require loss of nominal capacity.
+
+Failure emerges when:
+
+- κ decreases (loss of independence)
+- ΔI increases (structural lock-in)
+- S increases (signal degradation)
+
+Under these conditions, regulatory capacity becomes structurally ineffective.
+
+---
+
+6. Observer Collapse
+
+Observer Collapse is defined as:
+
+κ → 0
+
+In this state:
+
+- corrective signals become self-referential
+- system measurement loses external grounding
+- apparent control diverges from actual system state
+
+Observer collapse represents a loss of independent verification.
+
+---
+
+7. Drift Regime (Degraded Stability State)
+
+Systems may continue operating after failure conditions emerge.
+
+This regime is characterised by:
+
+- persistent operation under degraded alignment
+- divergence between observed output and underlying system state
+- masking of drift through distorted feedback
+
+Failure is therefore not a discrete event, but a trajectory.
+
+---
+
+8. Drift Correction Principle
+
+Correction is not defined as restoration of control.
+
+Correction is defined as:
+
+«stabilisation of system dynamics under bounded correction capacity and preserved independence.»
+
+Effective correction requires:
+
+- κ > 0 (independent observation exists)
+- C ≥ C₍crit₎ (minimum viable correction capacity)
+- bounded signal suppression S
+- controlled irreversibility growth ΔI(t)
+
+---
+
+9. Correction Stability Condition
+
+Correction is only structurally valid when:
+
+R_control(t) > L_load(t)
+
+Under conditions where:
+
+- κ remains stable or increases
+- ΔI growth is constrained
+- signal integrity remains sufficient for feedback
+
+---
+
+10. Dynamic Correction Constraint
+
+In dynamic systems, static inequality conditions are insufficient when irreversibility continues to increase.
+
+Correction must also exceed the rate of structural degradation.
+
+This introduces a velocity-aware condition:
+
+R_control(t) > L_load(t) + d(ΔI)/dt
+
+Where:
+
+d(ΔI)/dt represents the rate of irreversibility accumulation.
+
+Positive values indicate increasing structural lock-in.
+
+---
+
+Interpretation
+
+Even when:
+
+R_control(t) > L_load(t)
+
+correction may fail if:
+
+d(ΔI)/dt is sufficiently large.
+
+This defines a stricter condition:
+
+«correction must exceed both system load and the rate at which the system becomes harder to correct.»
+
+---
+
+11. Core Result
+
+Control is not a static property.
+
+It is a time-dependent inequality governed by:
+
+- independence (κ)
+- irreversibility (ΔI)
+- signal integrity (S)
+
+Failure is a trajectory rather than a threshold event.
+
+---
+
+12. Scope Limitation
+
+This document intentionally excludes:
+
+- implementation methods
+- procedural correction systems
+- operational architectures
+
+It defines structural conditions only.
+
+---
+
+Closing Statement
+
+System failure does not occur when capacity alone falls behind complexity.
+
+Failure occurs when:
+
+- independence degrades
+- signal integrity collapses
+- irreversibility accumulates
+- correction capacity becomes ineffective
+
+Stabilisation requires not only exceeding system load, but overcoming the velocity of structural degradation.
+
+---
